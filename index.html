@@ -1,0 +1,49 @@
+ <html>
+	<head>
+		<link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.0/magnific-popup.min.css">
+		<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/pojoaque.min.css">
+		<link rel="stylesheet" href="./example.css">
+		<link rel="stylesheet" href="./styles/grid/grid.css">
+	</head>
+	<body>
+	<br>
+	jf 051015 14.27 ver. 0.2<br>jf 051015 00.08 ver. 0.1
+	
+	<H2>INSTAGRAM CUSTOM SCRAPER</h2>
+	<form action="">
+	<p>Please input your Instagram UserID (for now we use Christians Instagram UserID: 203606245)<br>
+	Find other users UserId <A HREF="http://jelled.com/instagram/lookup-user-id#" target="new">here</A> or run this url in the browser to get a json list with a UserID:<br> "http://jelled.com/ajax/instagram?do=username&username=" + someones_instagram_username, like <A HREF="http://jelled.com/ajax/instagram?do=username&username=dargelf" target="new">dargelf</A> <br> 
+	<input type='text' id='myText' value="203606245" /><br>
+	<p>Please input max number of images<br>
+	Click any image to see caption and number of likes. <br>
+	<input type='text' id='myTest' value="0" /><br><br>
+	<input type='button' onclick='notEmpty()' value='Display images' /><br><br>
+	<input type='button' onclick='notSoEmpty()' value='Display JSON' /><br>
+	<!-- <p>Reloads the current page from the server and not from cache<br>
+	<input type='button' onclick='location.reload(true)' value='Reload page' /> -->
+	</form>
+	<br>
+	<p>TODO:<br>
+	- Kargoe should get proper Instagram developer account to get account token and user token, right now we use someone elses account!<br>
+	- fix functionality with UserID retrieval, right now we use a hack with someones else PHP and token<br>
+	- insert URL back to original Instagram post<br>
+	- <del>fix deletion of injected content, instead of having to reload the page</del><br>
+	- <del>fix JSON output to look more readable</del><br>
+	<br>
+	
+		
+
+		<div class="instaBlock" id="kargoeBlock"></div>
+
+		
+
+		<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.0/jquery.magnific-popup.min.js"></script>
+		<script src="./instafetch.js"></script>
+		<script src="./example.js"></script>
+		<script src="./styles/grid/grid.js"></script>
+		<script>hljs.initHighlightingOnLoad();</script>
+	</body>
+</html>
